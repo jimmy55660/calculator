@@ -95,10 +95,9 @@ $(document).ready(function () {
                 default:
                     break;
             }
-            a = result; ans = 1; operator = '';
+            a = result; ans = 1;oper = ''; equaloper = '';
             $('input[id=show]').val(function (index, value0) {
                 return result;
-                
             });
         } else {
             switch (operator) {
@@ -130,43 +129,7 @@ $(document).ready(function () {
                 default:
                     break;
             }
-        }
-
-        if (oper != '') {
-            switch (oper) {
-                case '+':
-                    result = a + b;
-                    oper = '';
-                    console.log('a+b=' + result);
-                    break;
-                case '-':
-                    oper = '';
-                    result = a - b;
-                    console.log('a-b' + result);
-                    break;
-                case '*':
-                    oper = '';
-                    result = a * b;
-                    console.log('b:' + b);
-                    console.log('a:' + a);
-                    console.log('a*b' + result);
-                    break;
-                case '/':
-                    oper = '';
-                    result = a / b;
-                    console.log('b:' + b);
-                    console.log('a:' + a);
-                    console.log('a/b' + result);
-                    break;
-                default:
-                    break;
-            }
-            a = result;oper = ''; operator = ''; ans = 1;
-            $('input[id=show]').val(function (index, value0) {
-                return result;
-                
-            });
-        }
+        }       
     });
 
     $('button[name=equal]').click(function () {
@@ -199,10 +162,9 @@ $(document).ready(function () {
                 default:
                     break;
             }
-            a = result; equaloper = ''; operator = ''; ans = 1;
+            a = result; equaloper = ''; ans = 1;oper=''; 
             $('input[id=show]').val(function (index, value0) {
                 return result;
-               
             });
         }
     });
