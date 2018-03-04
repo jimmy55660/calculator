@@ -42,57 +42,52 @@ $(document).ready(function () {
             switch (oper || equaloper) {
                 case '+':
                     result = a + b;
-                    oper = $(this).attr("id");
                     break;
                 case '-':
-                    oper = $(this).attr("id");
                     result = a - b;
                     break;
                 case '*':
-                    oper = $(this).attr("id");
                     result = a * b;
                     break;
                 case '/':
-                    oper = $(this).attr("id");
                     result = a / b;
                     break;
                 default:
                     break;
             }
-            a = result; ans = 1;oper = ''; equaloper = '';
+            a = result; ans = 1; 
             $('input[id=show]').val(function (index, value0) {
                 return result;
             });
-        } else {
-            switch (operator) {
-                case '+':
-                    firstone++;
-                    oper = '+';
-                    equaloper = '+';
-                    ans = 1;
-                    break;
-                case '-':
-                    firstone++;
-                    oper = '-';
-                    equaloper = '-';
-                    ans = 1;
-                    break;
-                case '*':
-                    firstone++;
-                    oper = '*';
-                    equaloper = '*';
-                    ans = 1;
-                    break;
-                case '/':
-                    firstone++;
-                    oper = '/';
-                    equaloper = '/';
-                    ans = 1;
-                    break;
-                default:
-                    break;
-            }
-        }       
+        }
+        switch (operator) {
+            case '+':
+                firstone++;
+                oper = '+';
+                equaloper = '+';
+                ans = 1;
+                break;
+            case '-':
+                firstone++;
+                oper = '-';
+                equaloper = '-';
+                ans = 1;
+                break;
+            case '*':
+                firstone++;
+                oper = '*';
+                equaloper = '*';
+                ans = 1;
+                break;
+            case '/':
+                firstone++;
+                oper = '/';
+                equaloper = '/';
+                ans = 1;
+                break;
+            default:
+                break;
+        }
     });
 
     $('button[name=equal]').click(function () {
@@ -100,24 +95,20 @@ $(document).ready(function () {
             switch (equaloper) {
                 case '+':
                     result = a + b;
-                    equaloper = '';
                     break;
                 case '-':
-                    equaloper = '';
                     result = a - b;
                     break;
                 case '*':
-                    equaloper = '';
                     result = a * b;
                     break;
                 case '/':
-                    equaloper = '';
                     result = a / b;
                     break;
                 default:
                     break;
             }
-            a = result; equaloper = ''; ans = 1;oper=''; 
+            a = result; ans = 1;operator='';b=0;oper='';equaloper='';
             $('input[id=show]').val(function (index, value0) {
                 return result;
             });
