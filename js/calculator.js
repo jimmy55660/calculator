@@ -55,38 +55,17 @@ $(document).ready(function () {
                 default:
                     break;
             }
-            a = result; ans = 1; 
+            a = result; ans = 1;
             $('input[id=show]').val(function (index, value0) {
                 return result;
             });
         }
-        switch (operator) {
-            case '+':
-                firstone++;
-                oper = '+';
-                equaloper = '+';
-                ans = 1;
-                break;
-            case '-':
-                firstone++;
-                oper = '-';
-                equaloper = '-';
-                ans = 1;
-                break;
-            case '*':
-                firstone++;
-                oper = '*';
-                equaloper = '*';
-                ans = 1;
-                break;
-            case '/':
-                firstone++;
-                oper = '/';
-                equaloper = '/';
-                ans = 1;
-                break;
-            default:
-                break;
+
+        if (operator != '') {
+            firstone++;
+            oper = operator;
+            equaloper = operator;
+            ans = 1;
         }
     });
 
@@ -108,7 +87,7 @@ $(document).ready(function () {
                 default:
                     break;
             }
-            a = result; ans = 1;operator='';b=0;oper='';equaloper='';
+            a = result; ans = 1; operator = ''; b = 0; oper = ''; equaloper = '';
             $('input[id=show]').val(function (index, value0) {
                 return result;
             });
